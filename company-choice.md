@@ -46,4 +46,10 @@ Qué información necesitaría:
 - Incidencias y devoluciones: el motivo, las fotos del producto devuelto y las reglas de devolución de cada cliente, para decidir si se acepta o se rechaza y explicar por qué.
 - Personas y departamentos: Quién es responsable de cada área, para enviar cada aviso o ticket a la persona correcta.
 
+Qué produciría:
 
+- Etiquetas de incidencias y devoluciones con la decisión tomada y el motivo.
+- Avisos al responsable de cada área cuando algo falla (paquete sin etiquetar, mal ubicado, en mal estado).
+- La recomendación del mejor transportista para cada envío.
+- Un panel con el estado de todos los pedidos y el recorrido de cada paquete.
+- Informes actualizados del funcionamiento del almacén.
