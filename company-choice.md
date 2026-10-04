@@ -19,7 +19,8 @@ Logística inversa: "Cada devolución pasa por revisión manual — no existen c
 
 Tecnología y Dirección Ejecutiva: Unificar los sistemas que ya hay junto a la dirección ejecutiva mejoraría las decisiones empresariales, la comunicación, la eficiencia general de la empresa al tener todo en el mismo lugar y con la información actualizada.
 
-El reto es poder conectar almacén, gestión de transportistas, logística inversa y dirección ejecutiva en un agente que envuelva, conecte y mejore estos departamentos mediante un sistema único. Habría que añadir algún departamento más para que pueda ser lo más eficiente posible (por ejemplo atención al cliente para poder gestionar la logística inversa) pero esos son los que más me llaman la atención.
+"Una API de inventario unificada que devuelva el stock en tiempo real de cualquier producto en cualquiera de los dos almacenes" (Operaciones de almacén). Es la base de mi agente (sin un inventario unificado no se puede seguir el recorrido de cada paquete ni avisar de los errores). El reto es poder conectar almacén, gestión de transportistas, logística inversa y dirección ejecutiva en un agente que envuelva, conecte y mejore estos departamentos mediante un sistema único. 
+Habría que añadir algún departamento más para que pueda ser lo más eficiente posible (por ejemplo atención al cliente para poder gestionar la logística inversa) pero esos que he comentado son los que más me llaman la atención.
 
 
 ## My AI Agent Idea
@@ -32,8 +33,8 @@ La idea de agente que tengo para esta empresa es un Director de operaciones:
 - Crear registros de los transportistas
 - Con los registros poder seleccionar el mejor transportista para cada paquete en específico
 - Recoger incidencias, devoluciones y generar tickets con las decisiones necesarias (se acepta/rechaza devolución) y por qué
-- Sistema único de comunicación (general y específico entre cada departamento) para que cada persona que quiera pueda revisar el estado de cada pedido/devolucion (por ejemplo hay un paquete que no está etiquetado o en un estante que no corresponde y la persona encargada puede ver que pasó con ese paquete, como llegó hasta ahí y los distintos pasos que tuvo desde que entró al almacén)
-- Crear informes actualizados del estado general (y específico) del funcionamiento del almacén
+- Sistema único de comunicación (general y específico entre cada departamento) para que cada persona que quiera pueda revisar el estado de cada pedido/devolución (por ejemplo hay un paquete que no está etiquetado o en un estante que no corresponde y la persona encargada puede ver que pasó con ese paquete, como llegó hasta ahí y los distintos pasos que tuvo desde que entró al almacén)
+
 
 Qué información necesitaría:
 
