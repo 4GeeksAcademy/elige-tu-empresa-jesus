@@ -22,7 +22,7 @@ Tecnología y Dirección Ejecutiva: Unificar los sistemas que ya hay junto a la 
 El reto es poder conectar almacén, gestión de transportistas, logística inversa y dirección ejecutiva en un agente que envuelva, conecte y mejore estos departamentos. Habría que añadir algún departamento más para que pueda ser lo más eficiente posible (por ejemplo atención al cliente para poder gestionar la logística inversa) pero esos son los que más me llaman la atención.
 
 
-## My AI Agent 
+## My AI Agent Idea
 
 La idea de agente que tengo para esta empresa es un Director de operaciones:
 
