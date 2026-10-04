@@ -19,7 +19,7 @@ Logística inversa: Tener que pasar todas las decisiones por una cadena de mando
 
 Tecnología y Dirección Ejecutiva: Unificar los sistemas que ya hay junto a la dirección ejecutiva mejoraría las decisiones empresariales, la comunicación, la eficiencia general de la empresa al tener todo en el mismo lugar y con la información actualizada.
 
-El reto es poder conectar almacén, gestión de transportistas, logística inversa y dirección ejecutiva en un agente que envuelva, conecte y mejore estos departamentos. Habría que añadir algún departamento más para que pueda ser lo más eficiente posible (por ejemplo atención al cliente para poder gestionar la logística inversa) pero esos son los que más me llaman la atención.
+El reto es poder conectar almacén, gestión de transportistas, logística inversa y dirección ejecutiva en un agente que envuelva, conecte y mejore estos departamentos mediante un sistema único. Habría que añadir algún departamento más para que pueda ser lo más eficiente posible (por ejemplo atención al cliente para poder gestionar la logística inversa) pero esos son los que más me llaman la atención.
 
 
 ## My AI Agent Idea
