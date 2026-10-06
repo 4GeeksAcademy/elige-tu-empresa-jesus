@@ -25,7 +25,8 @@ Sin estos datos es imposible llevar un registro de cada transportista actualizad
 
 Unificar los sistemas que ya hay junto a la dirección ejecutiva mejoraría las decisiones empresariales, la comunicación, la eficiencia general de la empresa al tener todo en el mismo lugar y con la información actualizada.
 
-"Una API de inventario unificada que devuelva el stock en tiempo real de cualquier producto en cualquiera de los dos almacenes" (Operaciones de almacén). Es la base de mi agente (sin un inventario unificado no se puede seguir el recorrido de cada paquete ni avisar de los errores). El reto es poder conectar almacén, gestión de transportistas, logística inversa y dirección ejecutiva en un agente que envuelva, conecte y mejore estos departamentos mediante un sistema único. 
+"Una API de inventario unificada que devuelva el stock en tiempo real de cualquier producto en cualquiera de los dos almacenes" (Operaciones de almacén). Es la base de mi agente (sin un inventario unificado no se puede seguir el recorrido de cada paquete ni avisar de los errores). 
+El reto es poder conectar almacén, gestión de transportistas, logística inversa y dirección ejecutiva en un agente que envuelva, conecte y mejore estos departamentos mediante un sistema único. 
 Habría que añadir algún departamento más para que pueda ser lo más eficiente posible (por ejemplo atención al cliente para poder gestionar la logística inversa) pero esos que he comentado son los que más me llaman la atención.
 
 
