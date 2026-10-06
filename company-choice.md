@@ -13,11 +13,11 @@ Esta es mi elección porque en mi día a día en el trabajo me encargo (en peque
 
 Sin estos datos es imposible llevar un registro de cada transportista actualizado para mejorar el servicio. Llevar un seguimiento manual de todo es inviable e ineficiente.
 
-Operaciones de almacén: "Las discrepancias de inventario son frecuentes y se detectan tarde" Al igual que el anterior departamento el llevar registros e inventario unificados (y no en distintos sistemas) podría ahorrar tanto tiempo como incidencias generadas. 
+## Operaciones de almacén: "Las discrepancias de inventario son frecuentes y se detectan tarde" Al igual que el anterior departamento el llevar registros e inventario unificados (y no en distintos sistemas) podría ahorrar tanto tiempo como incidencias generadas. 
 
-Logística inversa: "Cada devolución pasa por revisión manual — no existen criterios de aprobación automáticos". Tener que pasar todas las decisiones por una cadena de mando genera mucho retraso cuando puede tener una solución rápida y sencilla.
+## Logística inversa: "Cada devolución pasa por revisión manual — no existen criterios de aprobación automáticos". Tener que pasar todas las decisiones por una cadena de mando genera mucho retraso cuando puede tener una solución rápida y sencilla.
 
-Tecnología y Dirección Ejecutiva: Unificar los sistemas que ya hay junto a la dirección ejecutiva mejoraría las decisiones empresariales, la comunicación, la eficiencia general de la empresa al tener todo en el mismo lugar y con la información actualizada.
+## Tecnología y Dirección Ejecutiva: Unificar los sistemas que ya hay junto a la dirección ejecutiva mejoraría las decisiones empresariales, la comunicación, la eficiencia general de la empresa al tener todo en el mismo lugar y con la información actualizada.
 
 "Una API de inventario unificada que devuelva el stock en tiempo real de cualquier producto en cualquiera de los dos almacenes" (Operaciones de almacén). Es la base de mi agente (sin un inventario unificado no se puede seguir el recorrido de cada paquete ni avisar de los errores). El reto es poder conectar almacén, gestión de transportistas, logística inversa y dirección ejecutiva en un agente que envuelva, conecte y mejore estos departamentos mediante un sistema único. 
 Habría que añadir algún departamento más para que pueda ser lo más eficiente posible (por ejemplo atención al cliente para poder gestionar la logística inversa) pero esos que he comentado son los que más me llaman la atención.
