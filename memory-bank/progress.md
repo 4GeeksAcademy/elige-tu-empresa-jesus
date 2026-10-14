@@ -11,13 +11,17 @@ Este banco registra el estado inicial observado en el repositorio, no el avance 
 - Estructura y guías del monorepo para interfaces, servicios, datos, IA, automatización, reutilización y operaciones. Fuente: [README.es.md](../README.es.md) y los README por carpeta.
 - Configuración de contenedor y script de preparación, con dependencias de proyecto todavía incompletas. Fuentes: [devcontainer.json](../.devcontainer/devcontainer.json), [post-create.sh](../.devcontainer/post-create.sh) y el diagnóstico en [techContext.md](techContext.md).
 - Metadata y tipos genéricos del paquete compartido; plantilla de agente aún vacía; plantilla de skill y ejemplo de limpieza con pandas. Fuentes: [package.json](../packages/shared/package.json), [index.ts](../packages/shared/types/index.ts), [agent.py](../agents/_template/agent.py), [SKILL.md](../skills/_template/SKILL.md) y [pandas_clean.py](../skills/data-analysis/scripts/pandas_clean.py).
-- Banco de memoria compuesto únicamente por [projectbrief.md](projectbrief.md), [techContext.md](techContext.md) y este archivo. Contiene contexto, fuentes, dudas y siguientes pasos; no añade configuración de lectura automática para agentes.
+- Banco de memoria compuesto únicamente por [projectbrief.md](projectbrief.md), [techContext.md](techContext.md) y este archivo. Contiene contexto, fuentes, dudas y siguientes pasos.
+- Manual para agentes en [AGENTS.md](../AGENTS.md), con lecturas de inicio, separación de responsabilidades, flujo previo al commit y protección de archivos. El mecanismo de lectura al iniciar sesión está resuelto: el manual indica qué leer y el usuario ha comprobado que Copilot lo carga automáticamente en un chat nuevo.
+- Tres reglas de desarrollo en `.agents/rules/`: [frontend-coherente.md](../.agents/rules/frontend-coherente.md), [limites-ia.md](../.agents/rules/limites-ia.md) y [verdad-negocio.md](../.agents/rules/verdad-negocio.md). Cubren el stack y la separación del frontend, los permisos y límites de la IA, y la fidelidad a las fuentes del negocio.
+- Skill de desarrollo [implementar-flujo-ui](../.agents/skills/implementar-flujo-ui/SKILL.md), para implementar un flujo acordado en una aplicación React + Vite + TypeScript existente. No inicializa aplicaciones ni implementa APIs o automatizaciones; su existencia no implica que haya interfaces implementadas.
 - Tecnología de frontend aprobada por el usuario el 13 de octubre de 2026: React + Vite + TypeScript para website y backoffice. Registro de la decisión y su origen: [techContext.md, decisiones de arquitectura](techContext.md).
 
 ## Qué falta
 
 Los siguientes puntos distinguen los destinos previstos por las guías de su implementación, ausente en el inventario actual:
 
+- Acordar el caso de uso inicial, su alcance y sus criterios de aceptación. Para aplicar la skill de interfaz también deben concretarse la persona usuaria, el flujo, los datos o contrato de API y el contenido de negocio confirmado. Fuente: [implementar-flujo-ui](../.agents/skills/implementar-flujo-ui/SKILL.md).
 - Implementar la web pública y el backoffice con React + Vite + TypeScript; la tecnología está aprobada, pero las aplicaciones todavía no existen. Fuentes: [uis/README.es.md](../uis/README.es.md) y [techContext.md, decisiones de arquitectura](techContext.md).
 - API de negocio, integraciones, modelos de dominio y workers cuando sean necesarios. Fuentes: [README.es.md, services](../README.es.md) y [services/README.es.md](../services/README.es.md).
 - Datos de ejemplo, pipelines y conjuntos de evaluación de TrackFlow. Fuentes: [data/raw/README.es.md](../data/raw/README.es.md), [data/pipelines/README.es.md](../data/pipelines/README.es.md), [data/process/README.es.md](../data/process/README.es.md) y [data/eval/README.es.md](../data/eval/README.es.md).
@@ -30,15 +34,14 @@ Los siguientes puntos distinguen los destinos previstos por las guías de su imp
 - Acordar el alcance mínimo y qué departamento se atiende primero. Las necesidades de [CONTEXT.md](../CONTEXT.md) abarcan muchas áreas; la idea de [company-choice.md](../company-choice.md) no constituye un plan aprobado.
 - Concretar versiones y configuración de las interfaces con el stack ya aprobado; el resto de decisiones de arquitectura sigue pendiente. Fuente: [techContext.md, decisiones de arquitectura](techContext.md).
 - Resolver, cuando se prepare la implementación, el setup Python incompleto y la ruta de entrada del paquete compartido. Fuentes: [post-create.sh](../.devcontainer/post-create.sh), [package.json](../packages/shared/package.json) y [index.ts](../packages/shared/types/index.ts). No se modifican en esta tarea.
-- Definir cómo el agente leerá estos documentos al iniciar una sesión. Crear Markdown no activa esa lectura por sí solo; la plantilla señala que no hay `AGENTS.md` en raíz. Fuente: [README.es.md, estado actual](../README.es.md).
 
 ## Próximos pasos previstos
 
 Esta secuencia es una propuesta para acordar, no un calendario. La elección de React + Vite + TypeScript ya está aprobada en [techContext.md](techContext.md); los demás pasos no implican decisiones adicionales aprobadas:
 
-1. Aclarar la identidad del CEO y confirmar el caso de uso inicial a partir de [CONTEXT.md](../CONTEXT.md) y la propuesta de [company-choice.md](../company-choice.md).
-2. Preparar las aplicaciones `uis/website` y `uis/backoffice` con React + Vite + TypeScript en una siguiente tarea de implementación. Decisión aprobada: [techContext.md](techContext.md). Destino de las interfaces: [uis/README.es.md](../uis/README.es.md).
+1. Aclarar la identidad del CEO y confirmar el caso de uso inicial, su alcance y sus criterios de aceptación a partir de [CONTEXT.md](../CONTEXT.md) y la propuesta de [company-choice.md](../company-choice.md).
+2. Acordar las versiones y la configuración pendientes e inicializar las aplicaciones `uis/website` y `uis/backoffice` con React + Vite + TypeScript en una siguiente tarea de implementación. La skill de interfaz requiere una aplicación existente y no cubre esta inicialización. Decisión aprobada: [techContext.md](techContext.md). Destino de las interfaces: [uis/README.es.md](../uis/README.es.md).
 3. Preparar dependencias y comandos reproducibles del stack aprobado, atendiendo a los problemas existentes del setup y del paquete compartido. Fuentes: [post-create.sh](../.devcontainer/post-create.sh) y [package.json](../packages/shared/package.json).
 4. Definir contratos de datos y muestras sintéticas o anonimizadas para el caso de uso, documentando origen y evaluación. Fuentes: [data/raw/README.es.md](../data/raw/README.es.md), [data/eval/README.es.md](../data/eval/README.es.md) y [packages/README.es.md](../packages/README.es.md).
-5. Implementar una primera funcionalidad de extremo a extremo, con interfaz, API y pruebas, siguiendo la separación del [README.es.md](../README.es.md); añadir IA o workflows según el caso acordado, no por defecto.
-6. Actualizar este banco con avances verificables, decisiones aprobadas y pendientes. Acordar por separado el mecanismo de lectura al iniciar sesiones; no crear archivos adicionales en esta tarea.
+5. Implementar una primera funcionalidad de extremo a extremo, con interfaz, API y pruebas, siguiendo la separación del [README.es.md](../README.es.md). Para la parte de interfaz, usar [implementar-flujo-ui](../.agents/skills/implementar-flujo-ui/SKILL.md) una vez exista la aplicación y estén acordados el flujo, los datos o contrato de API y el contenido de negocio; añadir IA o workflows según el caso acordado, no por defecto.
+6. Actualizar este banco con avances verificables, decisiones aprobadas y pendientes, siguiendo [AGENTS.md](../AGENTS.md). La lectura al iniciar sesiones ya está resuelta y no requiere una tarea adicional.
