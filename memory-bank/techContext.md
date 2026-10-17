@@ -7,7 +7,7 @@ Se distingue entre archivos existentes, orientación de la plantilla y necesidad
 ## Qué hay ahora en el repositorio
 
 - Monorepo de inicio del programa AI Engineering, organizado por responsabilidad. Predominan las guías y plantillas; no hay aplicaciones de negocio implementadas. Fuente: [README.es.md, propósito y estado actual](../README.es.md), contrastado con los archivos actuales de las carpetas.
-- Interfaces previstas: web pública y backoffice, aún sin aplicaciones implementadas. React + Vite + TypeScript está aprobado para ambas; la decisión se registra en la sección «Decisiones de arquitectura» de este archivo. Fuente del papel de las interfaces: [uis/README.es.md](../uis/README.es.md), contrastado con el contenido actual de la carpeta.
+- Interfaces previstas: web pública y backoffice, aún sin aplicaciones implementadas. ~~React + Vite + TypeScript está aprobado para ambas~~ **SUSTITUIDO**: HTML + Tailwind CSS v4 (por CDN) + Javascript (solo para validar el formulario en `validation.js`) es el stack aprobado para `uis/website`; el mismo stack (sin `validation.js`) para `uis/backoffice`. La decisión se registra en la sección «Decisiones de arquitectura» de este archivo. Fuente del papel de las interfaces: [uis/README.es.md](../uis/README.es.md), contrastado con el contenido actual de la carpeta.
 - Backend previsto: una API FastAPI centralizada, con módulos por dominio y workers separados solo cuando sean necesarios. Es orientación de la plantilla, no una API existente ni una nueva decisión tomada por este banco. Fuentes: [README.es.md, services](../README.es.md) y [services/README.es.md](../services/README.es.md).
 - Paquete privado `@repo/shared-types`, versión `0.0.1`, sin scripts ni dependencias declaradas. Incluye tipos TypeScript genéricos `Id` y `BaseEntity`, no modelos de TrackFlow. Fuentes: [packages/shared/package.json](../packages/shared/package.json) y [packages/shared/types/index.ts](../packages/shared/types/index.ts).
 - Hay una inconsistencia en ese paquete: los campos `main` y `types` apuntan a `index.ts`, pero el archivo existente está en `types/index.ts`. No se corrige en esta tarea. Fuentes: [packages/shared/package.json](../packages/shared/package.json) y [packages/shared/types/index.ts](../packages/shared/types/index.ts).
@@ -44,10 +44,18 @@ El setup ejecuta `uv sync` con `set -euo pipefail`, pero falta el manifiesto de 
 
 ### Frontend aprobado
 
-- **Decisión:** usar React + Vite + TypeScript tanto en `uis/website` como en `uis/backoffice`.
-- **Origen:** aprobación explícita del usuario el 13 de octubre de 2026: «Usemos react + vite + typescript para ambas como recomiendas». Este archivo registra la decisión; no procede de la plantilla original.
-- **Motivo:** mantener una base tecnológica común y facilitar la reutilización de componentes y tipos. El repo ya incluye tipos TypeScript de ejemplo en [packages/shared/types/index.ts](../packages/shared/types/index.ts).
-- **Estado:** aprobado, pendiente de implementación. No se han creado las aplicaciones ni instalado dependencias. El papel de ambas interfaces está descrito en [uis/README.es.md](../uis/README.es.md).
+~~Decisión anterior (13-oct-2026): React + Vite + TypeScript para ambas.~~ **SUSTITUIDO.**
+
+- **Decisión:** usar HTML + Tailwind CSS v4 (cargado por CDN) + Javascript (exclusivamente para validación del formulario en `validation.js`) para `uis/website`. Para `uis/backoffice` se usa el mismo stack HTML + Tailwind CSS v4 por CDN, sin `validation.js` (a definir su validación cuando se implemente).
+- **Origen:** los requisitos del proyecto están definidos en [docs/context/web-hito-1.md](../docs/context/web-hito-1.md), que exige un sitio responsive, accesible y optimizado para SEO con Tailwind y validación completa en el formulario. Miguel Torres (Director Comercial) solicita explícitamente «Usa Tailwind y asegúrate de que el formulario tenga validación completa». El caso de `uis/backoffice` es decisión del propietario del proyecto basada en mantener coherencia de stack.
+- **Motivo:** el hito de la web pública es un sitio informativo con formulario de captura de leads. No requiere un framework React; HTML estático con Tailwind v4 por CDN cubre los requisitos de diseño responsive y la validación con Javascript plano en `validation.js` es suficiente. Se evita la sobrecarga de un toolchain React+Vite+TypeScript para este alcance.
+- **Estado:** aprobado, pendiente de implementación. No se han creado los archivos HTML, CSS, JS ni instalado el servidor HTTP.
+- **Comando para servir la web (website):** `npx http-server uis/website -p 3000 -a 0.0.0.0`
+- **Comando para servir el backoffice:** pendiente de definir (puerto a decidir).
+
+### Frontend aprobado (histórico)
+
+~~Esta sección contenía la decisión anterior (React + Vite + TypeScript del 13-oct-2026). Sustituida por la sección superior.~~
 
 ### Decisiones pendientes
 
