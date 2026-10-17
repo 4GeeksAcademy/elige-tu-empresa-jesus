@@ -1,6 +1,6 @@
 - descripción: Mantener las interfaces en el stack aprobado, separadas del backend y verificadas.
 - alcance: por patrón de archivo
-- archivos: uis/**
+- archivos: uis/\*\*
 
 ## Qué pide la regla
 
