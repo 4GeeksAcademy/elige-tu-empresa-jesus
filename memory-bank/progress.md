@@ -4,7 +4,7 @@
 
 Este banco registra el estado inicial observado en el repositorio, no el avance de los sistemas históricos de la empresa. Leer junto con [projectbrief.md](projectbrief.md) y [techContext.md](techContext.md). La plantilla declara que aún no incluye aplicaciones de negocio: [README.es.md, estado actual](../README.es.md).
 
-> **Hito actual:** Web pública (landing page + formulario de contacto). Requisitos definidos en [docs/context/web-hito-1.md](../docs/context/web-hito-1.md). Pendiente de implementar.
+> **Hito actual:** Web pública (landing page + formulario de contacto). Requisitos definidos en [docs/context/web-hito-1.md](../docs/context/web-hito-1.md). Landing page (`index.html`) creada; formulario pendiente.
 
 ## Qué existe ya
 
@@ -19,12 +19,15 @@ Este banco registra el estado inicial observado en el repositorio, no el avance 
 - Skill de desarrollo [implementar-flujo-ui](../.agents/skills/implementar-flujo-ui/SKILL.md), para implementar un flujo acordado en una aplicación React + Vite + TypeScript existente. No inicializa aplicaciones ni implementa APIs o automatizaciones; su existencia no implica que haya interfaces implementadas.
 - ~~Tecnología de frontend aprobada el 13-oct-2026: React + Vite + TypeScript~~ **SUSTITUIDO.** Tecnología de frontend aprobada el 17 de octubre de 2026: HTML + Tailwind CSS v4 (por CDN) + Javascript (solo validación en `validation.js`) para `uis/website`; mismo stack (sin `validation.js`) para `uis/backoffice`. Los requisitos del proyecto están en [docs/context/web-hito-1.md](../docs/context/web-hito-1.md). Registro de la decisión y su origen: [techContext.md, decisiones de arquitectura](techContext.md).
 
+- Landing page [uis/website/index.html](../uis/website/index.html) y su [README](../uis/website/README.md): HTML5 semántico, Tailwind v4 por CDN, una sola `<nav>`, secciones Hero, Servicios, Cobertura, Por qué TrackFlow y Contacto, footer, SVG propios, ARIA y Schema.org `Organization` del hito. El botón "Solicitar información" enlaza a `application.html`, que aún no existe. No verificada en navegador: faltan la revisión visual, Lighthouse (objetivo 80 o más) y la comprobación de consola.
+
 ## Qué falta
 
 Los siguientes puntos distinguen los destinos previstos por las guías de su implementación, ausente en el inventario actual:
 
 - Acordar el caso de uso inicial, su alcance y sus criterios de aceptación. Para aplicar la skill de interfaz también deben concretarse la persona usuaria, el flujo, los datos o contrato de API y el contenido de negocio confirmado. Fuente: [implementar-flujo-ui](../.agents/skills/implementar-flujo-ui/SKILL.md).
-- Implementar la web pública y el backoffice con HTML + Tailwind CSS v4 por CDN + Javascript (validación en `validation.js` solo en `uis/website`). La tecnología está aprobada según los requisitos de [docs/context/web-hito-1.md](../docs/context/web-hito-1.md), pero los archivos todavía no existen. Fuentes: [uis/README.es.md](../uis/README.es.md) y [techContext.md, decisiones de arquitectura](techContext.md).
+- Completar la web pública: `application.html` (formulario) y `validation.js` (validación, mensajes de error, mensaje de éxito y aviso de volumen bajo), más `styles.css` solo si hace falta. Verificar la landing en navegador y con Lighthouse.
+- Implementar el backoffice con HTML + Tailwind CSS v4 por CDN, sin `validation.js`. Los archivos todavía no existen. Fuentes: [uis/README.es.md](../uis/README.es.md) y [techContext.md, decisiones de arquitectura](techContext.md).
 - API de negocio, integraciones, modelos de dominio y workers cuando sean necesarios. Fuentes: [README.es.md, services](../README.es.md) y [services/README.es.md](../services/README.es.md).
 - Datos de ejemplo, pipelines y conjuntos de evaluación de TrackFlow. Fuentes: [data/raw/README.es.md](../data/raw/README.es.md), [data/pipelines/README.es.md](../data/pipelines/README.es.md), [data/process/README.es.md](../data/process/README.es.md) y [data/eval/README.es.md](../data/eval/README.es.md).
 - Agentes funcionales, conectores, conocimiento para RAG, automatizaciones y pruebas ejecutables. Fuentes: [agents/README.es.md](../agents/README.es.md), [agents/tools/README.es.md](../agents/tools/README.es.md), [mcps/README.es.md](../mcps/README.es.md), [workflows/README.es.md](../workflows/README.es.md) y [CONTEXT.md, necesidades de CX](../CONTEXT.md).
