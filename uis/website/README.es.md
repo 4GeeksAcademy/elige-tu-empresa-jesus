@@ -13,8 +13,8 @@ Landing page de TrackFlow (hito 1). Requisitos en [docs/context/web-hito-1.md](.
 | Archivo            | Estado                                             |
 | ------------------ | -------------------------------------------------- |
 | `index.html`       | Landing page (hecha)                               |
-| `application.html` | Formulario de solicitud de información (estructura hecha, sin validación) |
-| `validation.js`    | Validación del formulario (pendiente)              |
+| `application.html` | Formulario de solicitud de información (hecho) |
+| `validation.js`    | Validación del formulario (hecha) |
 | `styles.css`       | Solo si Tailwind por CDN no basta (pendiente)      |
 
 ## Ejecutar en local
@@ -27,6 +27,6 @@ npx http-server uis/website -p 3000 -a 0.0.0.0
 
 Abre `http://localhost:3000`.
 
-> El botón "Solicitar información" enlaza a `application.html`. El formulario aún no valida ni envía: falta `validation.js`.
+> El botón "Solicitar información" enlaza a `application.html`. El envío del formulario es simulado: no se envía ningún dato.
 
 > _These instructions are also available in [English](./README.md)._
