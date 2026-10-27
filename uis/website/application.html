@@ -14,6 +14,17 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e3a8a'/%3E%3Cpath d='M8 12h16M16 12v12' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      #application-form select {
+        appearance: none;
+        height: 2.75rem;
+        padding-right: 2.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='m6 8 4 4 4-4' stroke='%23334155' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-position: right 0.75rem center;
+        background-repeat: no-repeat;
+        background-size: 1.25rem;
+      }
+    </style>
   </head>
 
   <body class="bg-white font-sans text-slate-900 antialiased">
@@ -94,8 +105,9 @@
               class="rounded-lg border border-red-700 bg-red-50 p-4 text-base font-semibold text-red-900 empty:hidden"
             ></p>
 
-            <fieldset class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6">
-              <legend class="px-2 text-lg font-bold text-blue-900">Datos de la empresa</legend>
+            <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6">
+            <fieldset class="min-w-0">
+              <legend class="text-lg font-bold text-blue-900">Datos de la empresa</legend>
               <ul class="mt-2 grid gap-5 md:grid-cols-2">
                 <li>
                   <label for="nombre_empresa" class="block text-sm font-semibold text-slate-900"
@@ -178,9 +190,11 @@
                 </li>
               </ul>
             </fieldset>
+            </div>
 
-            <fieldset class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6">
-              <legend class="px-2 text-lg font-bold text-blue-900">Tu operación</legend>
+            <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6">
+            <fieldset class="min-w-0">
+              <legend class="text-lg font-bold text-blue-900">Tu operación</legend>
               <ul class="mt-2 grid gap-5 md:grid-cols-2">
                 <li>
                   <label for="pais" class="block text-sm font-semibold text-slate-900"
@@ -248,13 +262,15 @@
                 </li>
               </ul>
             </fieldset>
+            </div>
 
+            <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6">
             <fieldset
               id="servicios"
               aria-describedby="servicios-error"
-              class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6"
+              class="min-w-0"
             >
-              <legend class="px-2 text-lg font-bold text-blue-900">
+              <legend class="text-lg font-bold text-blue-900">
                 Servicios de interés <span aria-hidden="true">*</span>
               </legend>
               <p class="mt-2 text-sm text-slate-700">Puedes seleccionar más de uno.</p>
@@ -294,13 +310,15 @@
               </ul>
               <p id="servicios-error" class="mt-2 text-sm font-medium text-red-800" hidden></p>
             </fieldset>
+            </div>
 
+            <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6">
             <fieldset
               id="tiene_3pl"
               aria-describedby="tiene_3pl-error"
-              class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6"
+              class="min-w-0"
             >
-              <legend class="px-2 text-lg font-bold text-blue-900">
+              <legend class="text-lg font-bold text-blue-900">
                 ¿Actualmente trabajas con otro 3PL? <span aria-hidden="true">*</span>
               </legend>
               <ul class="mt-3 grid gap-3 sm:grid-cols-3">
@@ -340,9 +358,11 @@
               </ul>
               <p id="tiene_3pl-error" class="mt-2 text-sm font-medium text-red-800" hidden></p>
             </fieldset>
+            </div>
 
-            <fieldset class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6">
-              <legend class="px-2 text-lg font-bold text-blue-900">Información adicional</legend>
+            <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6">
+            <fieldset class="min-w-0">
+              <legend class="text-lg font-bold text-blue-900">Información adicional</legend>
               <ul class="mt-2 space-y-5">
                 <li>
                   <label for="comentarios" class="block text-sm font-semibold text-slate-900"
@@ -379,6 +399,7 @@
                 </li>
               </ul>
             </fieldset>
+            </div>
 
             <p class="flex flex-col gap-3 sm:flex-row">
               <button
